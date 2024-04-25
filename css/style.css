@@ -266,6 +266,7 @@ p{
   background-color: var(--primary-color);
   border: 0px solid red;
   position: fixed;
+  top: 0px;
   z-index: 999;
   height: 70px;
 }
@@ -664,6 +665,438 @@ footer{
 
 /* ---footer css is over now---  */
 
+
+/* ---footer above swiper sider is here ---  */
+
+.swiper_project{
+  width: 100%;
+  border: 0px solid red;
+  margin: auto;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* CARD COMPONENT */
+.swiper_slider .see_project{
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border: 0px solid black;
+  text-align: center;
+}
+
+.card {
+  display: grid !important;
+  place-items: center;
+  width: 80vw;
+  max-width: 21.875rem;
+  height: 29.125rem !important;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  margin-left: 2.78em !important;
+  border: 0px solid red;
+}
+
+.card > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.card__background {
+  object-fit: cover;
+  max-width: 100%;
+  height: 100% !important;
+}
+
+.card__content {
+  --flow-space: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  height: 55%;
+  padding: 0% 1.25rem 1.875rem;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.3) 10%,
+    hsl(0, 0%, 0%) 100%
+  );
+  border: 0px solid red;
+}
+.card__title{
+  font-size: 2.25rem;
+  color: white;
+}
+.card__description{
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+  text-align: justify;
+}
+.card__button{
+  border: 0px solid white;
+  background-color: red;
+}
+
+.card__content--container {
+  --flow-space: 1.25rem;
+}
+
+.card__title {
+  position: relative;
+  top: 0px;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  height: 0.3125rem;
+  width: calc(100% + 1.25rem);
+  bottom: calc((1.25rem - 0.5rem) * -1);
+  left: -1.25rem;
+  background-color: var(--brand-color);
+  border: 0px solid red;
+}
+
+.card__button {
+  padding: 0.75em 1.6em;
+  width: fit-content;
+  width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: 0.45em;
+  border: none;
+  background-color: hsl(46, 100%, 50%);
+  font-size: 1.125rem;
+  color: white;
+}
+
+.card__button:focus {
+  outline: 2px solid black;
+  outline-offset: -5px;
+}
+.swiper-pagination{
+  display: none;
+}
+
+@media (any-hover: hover) and (any-pointer: fine) {
+  .card__content {
+    transform: translateY(62%);
+    transition: transform 100ms ease-out;
+    transition-delay: 100ms;
+  }
+
+  .card__title::after {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 500ms ease-in, transform 100ms ease-out;
+    transition-delay: 100ms;
+    transform-origin: right;
+  }
+
+  .card__background {
+    transition: transform 100ms ease-in;
+  }
+
+  .card__content--container > :not(.card__title),
+  .card__button {
+    opacity: 0;
+    transition: transform 100ms ease-out, opacity 100ms ease-out;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.05);
+    transition: transform 100ms ease-in;
+  }
+
+  .card:hover .card__content,
+  .card:focus-within .card__content {
+    transform: translateY(0);
+    transition: transform 100ms ease-in;
+  }
+
+  .card:focus-within .card__content {
+    transition-duration: 0ms;
+  }
+
+  .card:hover .card__background,
+  .card:focus-within .card__background {
+    transform: scale(1.3);
+  }
+
+  .card:hover .card__content--container > :not(.card__title),
+  .card:hover .card__button,
+  .card:focus-within .card__content--container > :not(.card__title),
+  .card:focus-within .card__button {
+    opacity: 1;
+    transition: opacity 100ms ease-in;
+    transition-delay: 00ms;
+  }
+
+  .card:hover .card__title::after,
+  .card:focus-within .card__title::after {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: opacity 100ms ease-in, transform 100ms ease-in;
+    transition-delay: 100ms;
+  }
+  .swiper-pagination{
+    display: none;
+  }
+}
+
+/* --footer swiper slider code over now ---  */
+
+
+
+/* project code is here---  */
+.project_section{
+  width: 90%;
+  border: 0px solid red;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4em;
+}
+.project_section_left1{
+  width: 50%;
+  border: 0px solid red;
+  padding: 0em 3.5em 0em 0em;
+}
+.project_section_left12{
+  padding: 0em 0em 0em 3.5em;
+}
+.project_brick span{
+  color: var(--button-color);
+}
+.project_section_left1 h3{
+  font-weight: 500;
+  font-size: 30px;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+.project_section_left1 p{
+  font-size: 20px;
+  text-align: justify;
+  line-height: 30px;
+  margin-bottom: 0.5em;
+}
+.project_section_left1 .view_more{
+  padding: 10px 20px;
+  border: 1px solid black;
+  display: table;
+  border-radius: 5px;
+  margin-top: 2em;
+  cursor: pointer;
+}
+.project_section_left1 .view_more:hover{
+  background-color: black;
+  color: white;
+}
+.view_more a:hover{
+  color: white;
+}
+
+.project_section_right1{
+  width: 50%;
+  text-align: left;
+  transform: scale(1);
+
+}
+.project_section_right1 img{
+  width: 100%;
+  padding: 1rem;
+  border: 0px solid black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+.our_projects{
+  text-align: center;
+  font-weight: 500;
+  font-size: 40px;
+  border: 1px solid red;
+}
+.project_images{
+  border: 0px solid red;
+  display: table;
+  position: relative;
+  overflow: hidden;
+}
+.project_images_in{
+  width: 100%;
+  height: 100%;
+  border: 0px solid green;
+  position: absolute;
+  top: -100%;
+  overflow: hidden;
+  text-align: center;
+  font-size: 40px;
+  background-color: rgba(200, 203, 218, 0.3);
+  color: white;
+  font-weight: 600;
+}
+.project_images_in p{
+  margin-top: 25%;
+}
+.project_images:hover .project_images_in{
+  top: 0%;
+  transition: 0.5s;
+}
+
+/* ----project css is over now --  */
+
+.about_section{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  border: 0px solid red;
+  padding-top: 7em;
+  margin-bottom: 3em;
+}
+.about_left{
+  width: 40%;
+}
+.about_left img{
+  width: 80%;
+  height: 78%;
+  margin: auto;
+  margin-top: 2em;
+  padding: 1em;
+  border-radius: 50% 50% 0% 0%;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.about_left h1{
+  line-height: 55px;
+  font-weight: 500;
+}
+.about_right{
+  width: 60%;
+}
+.about_right p{
+    text-align: justify;
+    margin-bottom: 0px;
+}
+.experience_section{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.experiencce{
+  width: 50%;
+}
+.experiencce h3{
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 0.2em;
+}
+.experiencce p{
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
+.experiencce_border{
+  width: 80%;
+  border-bottom: 1px solid brown;
+}
+.about_right img {
+  background-size: cover;
+  width: 100%;
+  filter: grayscale(100%);
+  border-radius: 20px;
+  height: 80%;
+}
+
+/* ---about is over now--  */
+
+/* ----contact us sectio is here---  */
+.contact_us{
+  width: 100%;
+  border: 0px solid red;
+  margin-top: 5em;
+}
+.contact_from{
+  width: 60%;
+  border: 0px solid red;
+  margin: auto;
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+.contact_from_left{
+  width: 50%;
+  border: 0px solid green;
+}
+.contact_from_right{
+  width: 50%;
+  border: 0px solid red;
+}
+.input_contact input{
+  width: 95%;
+  background-color: white;
+  border: none;
+  padding: 20px 24px;
+  margin: 0px 0px 20px 0px;
+  font-size: 18px;
+  border: 0px solid red;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+.input_contact_right textarea{
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 24px 24px;
+  font-size: 18px;
+  border: 0px solid red;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+/* ----contact css is here ---  */
+.contact_map{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 0px solid red;
+  margin-top: 4em;
+}
+.contact_map_left{
+  width: 50%;
+  border: 0px solid black;
+}
+.contact_map_right{
+  width: 50%;
+  border: 0px solid green;
+}
+
+.grid-container_contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 4em;
+  padding: 20px;
+}
+
+/* Styles for grid items */
+.grid-item_contact {
+  padding: 20px;
+  text-align: center;
+  border: 0px solid red;
+}
+.grid-item_contact i{
+  transform: scale(1.4);
+}
+
+/* --contact css is over now---  */
+
 /* --mobile responsice css is here ----  */
 @media (min-width: 0px) and (max-width: 990px) { 
   .nav-bar{
@@ -837,4 +1270,101 @@ footer{
     flex-direction: column;
     text-align: center;
   }
+  .swiper-pagination{
+    display: none;
+  }
+  .card{
+    margin-left: 1.7em !important;
+  }
+  /* -----footer code is here--  */
+  /* ---proejct media query is here---  */
+  .project_section{
+    width: 100%;
+    flex-direction: column;
+  }
+  .project_brick p{
+    text-align: justify;
+  }
+  .project_section_left1 {
+    width: 100%;
+  }
+  .project_section_right1{
+    width: 100%;
+  }
+  .project_images img{
+    width: 100%;
+  }
+  .project_section_left1{
+    border: 0px solid red;
+    padding: 0em 0em 0em 0em;
+  }
+  .project_section_left12{
+    padding: 0em 0em 0em 0em;
+  }
+  .project_section_left1 h3{
+    text-align: center;
+  }
+  .project_link{
+    flex-direction: column;
+  }
+  .second_section{
+    flex-flow: column-reverse;
+  }
+  .proejctLink_left{
+    width: 100%;
+  }
+  .proejctLink_right{
+    width: 100%;
+  }
+
+  /* ----about is here --  */
+
+  .about_section{
+    flex-direction: column;
+    border: 0px solid red;
+  }
+  .about_left{
+    width: 100%;
+  }
+  .about_left img{
+    margin-left: 2em;
+    margin-bottom: 1em;
+  }
+  .about_left h1{
+    font-size: 20px;
+    width: 100%;
+    border: 0px solid red;
+    line-height: 33px;
+    margin-bottom: 5px;
+  }
+  .about_right{
+    width: 100%;
+  }
+  .about_right p{
+      font-size: 16px;
+      line-height: 30px;
+      text-align: justify;
+  }
+  .experience_section{
+    width: 100%;
+    flex-direction: column;
+    margin-top: 2em;
+  }
+  .experiencce h3{
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 65px;
+    margin-bottom: 0.2em;
+  }
+  .experiencce p{
+    font-size: 20px;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+  .experiencce_border{
+    width: 100%;
+    border-bottom: 1px solid brown;
+    margin-bottom: 0.5em;
+  }
+
 }
